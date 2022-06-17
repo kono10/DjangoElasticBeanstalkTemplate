@@ -2,6 +2,7 @@
 
 
 ## Testing With Docker
+* accessed from localhost:80001
 ```
 > docker build -f Dockerfile.test -t apptest .                                                                                                                     ─╯
 
