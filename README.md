@@ -1,16 +1,14 @@
 # Creating the app
 
-
 ## Testing With Docker
+* accessed from localhost:80001
 ```
 > docker build -f Dockerfile.test -t apptest .                                                                                                                     ─╯
-
 > docker run -p 8001:8000 apptest                                                                                                                                 ─╯
 ```
 
-
 ## Staring WSGI With Gunicorn
-* can add -D or --daemon command to the below command to run in the background
+* can add -D or --daemon command to the below to run in the background
 ```
 ❯ pwd
 /myproject
@@ -24,11 +22,4 @@
 [2022-06-17 13:44:48 -0500] [31655] [INFO] Booting worker with pid: 31655
 [2022-06-17 13:44:48 -0500] [31656] [INFO] Booting worker with pid: 31656
 [2022-06-17 13:44:48 -0500] [31657] [INFO] Booting worker with pid: 31657
-
 ```
-
-
-
-
-
-
