@@ -1,7 +1,7 @@
 # Creating the app
 
 ## Testing With Docker
-* accessed from localhost:80001
+* accessed from localhost:8001
 ```
 > docker build -f Dockerfile.test -t apptest .                                                                                                                     ─╯
 > docker run -p 8001:8000 apptest                                                                                                                                 ─╯
