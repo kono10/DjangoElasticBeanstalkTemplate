@@ -4,7 +4,8 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 RUN pip install -r requirements.txt
 ENV DJANGO_ENV=PROD
+# TODO update this
+ENV SECRET_KEY=test_key123
 COPY . .
-RUN cd myproject 
 
 CMD ["gunicorn", "--bind"," 0.0.0.0:8000", "--workers=4", "myproject.wsgi:application"]
