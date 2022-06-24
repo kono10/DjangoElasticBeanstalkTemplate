@@ -14,6 +14,4 @@ services:
       - '3050:80'
     volumes:
       - /Users/jkonovsky/development/DjangoElasticBeanstalkTemplate/myproject/staticfiles:/staticfiles
-  # debug using just the single container, should be able to access style.css from the url
-  # probably should not manually move the files
-  # https://forum.djangoproject.com/t/mime-type-text-html-is-not-a-supported-404-static-files-nginx-uwsgi-production/10459/3
+      # should update this to a relative instead of a relative path
