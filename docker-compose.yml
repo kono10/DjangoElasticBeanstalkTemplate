@@ -11,7 +11,6 @@ services:
     build:
       context: ./nginx
     ports:
-      - '3050:80'
+      - '80:80'
     volumes:
-      - /Users/jkonovsky/development/DjangoElasticBeanstalkTemplate/myproject/staticfiles:/staticfiles
-      # should update this to a relative instead of a relative path
+      - ./myproject/staticfiles:/staticfiles
