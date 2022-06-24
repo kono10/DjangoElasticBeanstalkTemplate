@@ -3,7 +3,8 @@ FROM python:3.6
 WORKDIR /usr/src/app
 COPY requirements.txt ./
 RUN pip install -r requirements.txt
+ENV SECRET_KEY=test_key123
 COPY . .
 RUN cd myproject 
 
-CMD ["python", "myproject/manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

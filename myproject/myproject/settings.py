@@ -16,8 +16,8 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-CONFIGS = {"PROD": {"DEBUG":True}, "DEV": {"DEBUG":False}}
-ENV = os.environ.get("ENV", "DEV")
+CONFIGS = {"PROD": {"DEBUG":False}, "DEV": {"DEBUG":True}}
+ENV = os.environ.get("DJANGO_ENV", "DEV")
 CURRENT_CONFIG = CONFIGS.get(ENV)
 
 
@@ -25,7 +25,7 @@ CURRENT_CONFIG = CONFIGS.get(ENV)
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY", "TESTKEY123")
+SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = CURRENT_CONFIG["DEBUG"]

@@ -1,10 +1,10 @@
 # Creating the app
 
-## Testing With Docker
+## Start up the django development server
 * accessed from localhost:8001
 ```
-> docker build -f Dockerfile.test -t apptest .                                                                                                                     ─╯
-> docker run -p 8001:8000 apptest                                                                                                                                 ─╯
+> docker build -f Dockerfile.dev -t djangodev .                                                                                                                     ─╯
+> docker run -p 8001:8000 djangodev                                                                                                                          ─╯
 ```
 
 ## Staring WSGI With Gunicorn

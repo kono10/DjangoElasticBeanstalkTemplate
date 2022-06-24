@@ -1,0 +1,25 @@
+sudo: required
+language: python
+services:
+  - docker
+
+before_install:
+  - echo "======== before install ========"
+
+script:
+  - docker build -t jkonovsky/djago-app-template .
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  region: "us-east-2"
+  app: "django-app-template"
+  env: "Djangoapptemplate-env"
+  bucket_name: "elasticbeanstalk-us-east-2-524057441336"
+  bucket_path: "django-app-template"
+  on:
+    branch: main
+
+after_deploy:
+  - echo "======== done deploying !!!! ========"
