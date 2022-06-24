@@ -7,7 +7,7 @@ before_install:
   - echo "======== before install ========"
 
 script:
-  - docker build -t jkonovsky/djago-app-template .
+  - docker build -t jkonovsky/djago-app-template myproject
 
 deploy:
   provider: elasticbeanstalk
