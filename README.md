@@ -21,4 +21,5 @@
 
 ## Todo
 * add unit tests
+  * unit tests failing during build bc environment doesn't have python packages installed
 * upload docker containers to dockerhub
