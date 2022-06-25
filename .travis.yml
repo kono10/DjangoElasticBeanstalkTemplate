@@ -7,7 +7,7 @@ before_install:
   - echo "======== before install ========"
 
 script:
-  - python manage.py test myapp
+  - python myproject/manage.py test myapp
 
 deploy:
   provider: elasticbeanstalk
