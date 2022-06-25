@@ -14,7 +14,7 @@
 * accessed from localhost
 ```
 ❯ pwd
-~/DjangoElasticBeanstalkTemplate/myproject
+~/DjangoElasticBeanstalkTemplate
 
 ❯ docker-compose up --build
 ```
