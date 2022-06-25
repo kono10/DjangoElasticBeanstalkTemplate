@@ -13,4 +13,4 @@ services:
     ports:
       - '80:80'
     volumes:
-      - ./myproject/staticfiles:/staticfiles
+      - ./myproject/prod_static:/static
