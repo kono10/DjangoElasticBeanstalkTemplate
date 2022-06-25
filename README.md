@@ -18,3 +18,7 @@
 
 ❯ docker-compose up --build
 ```
+
+## Todo
+* add unit tests
+* upload docker containers to dockerhub
