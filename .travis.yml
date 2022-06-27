@@ -5,6 +5,7 @@ services:
 
 before_install:
   - echo "======== before install ========"
+  - pip install -r myproject/requirements.txt
 
 script:
   - python myproject/manage.py test myapp
