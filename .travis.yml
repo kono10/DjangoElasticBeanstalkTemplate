@@ -10,6 +10,13 @@ before_install:
 script:
   - python myproject/manage.py test myapp
 
+after_success:
+  - docker build -t novskytech/DjangoProject ./myproject
+  - docker build -t novskytech/DjangoNginx ./nginx
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push novskytech/DjangoProject
+  - docker push novskytech/DjangoNginx
+
 deploy:
   provider: elasticbeanstalk
   access_key_id: $AWS_ACCESS_KEY
