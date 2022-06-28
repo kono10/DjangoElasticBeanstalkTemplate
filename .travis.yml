@@ -11,11 +11,11 @@ script:
   - python myproject/manage.py test myapp
 
 after_success:
-  - docker build -t novskytech/DjangoProject ./myproject
-  - docker build -t novskytech/DjangoNginx ./nginx
+  - docker build -t novskytech/djangoproject ./myproject
+  - docker build -t novskytech/djangonginx ./nginx
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push novskytech/DjangoProject
-  - docker push novskytech/DjangoNginx
+  - docker push novskytech/djangoproject
+  - docker push novskytech/djangonginx
 
 deploy:
   provider: elasticbeanstalk
