@@ -1,20 +1,18 @@
 version: '3'
 services:
   web:
-    image: novskytech/djangoproject
+    image: "novskytech/djangoproject"
     mem_limit: 128m
     ports:
       - '8001:8000'
     hostname: web
-    environment:
-      - SECRET_KEY=$SECRET_KEY
   nginx:
     depends_on:
       - web
-    image: novskytech/djangoproject
+    image: "novskytech/djangoproject"
     mem_limit: 128m
     hostname: nginx
     ports:
       - '80:80'
-    environment:
-      - SECRET_KEY=$SECRET_KEY
+    volumes:
+      - ./myproject/prod_static:/static

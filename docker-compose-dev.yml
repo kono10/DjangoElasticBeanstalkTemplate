@@ -3,6 +3,7 @@ services:
   web:
     build:
       context: ./myproject
+      dockerfile: Dockerfile.dev
     ports:
       - '8001:8000'
   nginx:
