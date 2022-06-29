@@ -14,8 +14,8 @@ after_success:
   - docker build -t novskytech/djangoproject ./myproject --no-cache
   - docker build -t novskytech/djangonginx ./nginx --no-cache
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push novskytech/djangoproject
-  - docker push novskytech/djangonginx
+  - docker push -f novskytech/djangoproject
+  - docker push -f novskytech/djangonginx
 
 deploy:
   provider: elasticbeanstalk
