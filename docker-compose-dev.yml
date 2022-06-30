@@ -6,7 +6,7 @@ services:
     ports:
       - '8001:8000'
     environment:
-      - SECRET_KEY
+      - SECRET_KEY=testkey
   nginx:
     depends_on:
       - web
