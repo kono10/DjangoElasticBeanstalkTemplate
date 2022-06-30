@@ -6,10 +6,14 @@ services:
 before_install:
   - echo "======== before install ========"
 
+install:
+  - pip install -r myproject/requirements.txt
+
 script:
   - python myproject/manage.py test myapp
 
 after_success:
+  - python myproject/manage.py collecstatic
   - docker build -t novskytech/djangoproject ./myproject --no-cache
   - docker build -t novskytech/djangonginx ./nginx --no-cache
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin

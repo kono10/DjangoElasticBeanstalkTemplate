@@ -1,6 +1,6 @@
 FROM python:3.6
 WORKDIR /usr/src/app
-COPY requirements.txt ./
+COPY requirements.txt .
 RUN pip install -r requirements.txt
 ENV DJANGO_ENV=PROD
 COPY . .
