@@ -12,6 +12,8 @@
 ## Start up production server (uses gunicorn and nginx) build and run docker containers locally
 * can add -D or --daemon command to the below to run in the background
 * accessed from localhost
+* use `dev.sh` so you don't have to run `python myproject/manage.py collecstatic` manually
+
 ```
 ❯ pwd
 ~/DjangoElasticBeanstalkTemplate
@@ -21,5 +23,6 @@
 
 ### File Index
 * docker-compose-dev.yml -> test production infrastructure with local docker builds
+* dev.sh -> runs docker-compose.yml and collecstatic
 * docker-compose.yml -> can run production infrastructure locally but pulls docker containers from dockerhub, is the the compose file used by AWS
 * Dockerfile.dev -> run Django app locally with Django development server
