@@ -14,7 +14,3 @@ services:
     hostname: nginx
     ports:
       - '80:80'
-    environment:
-      - SECRET_KEY
-    volumes:
-      - ./myproject/prod_static:/static

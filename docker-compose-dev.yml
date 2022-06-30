@@ -3,9 +3,10 @@ services:
   web:
     build:
       context: ./myproject
-      dockerfile: Dockerfile.dev
     ports:
       - '8001:8000'
+    environment:
+      - SECRET_KEY
   nginx:
     depends_on:
       - web
@@ -13,5 +14,3 @@ services:
       context: ./nginx
     ports:
       - '80:80'
-    volumes:
-      - ./myproject/prod_static:/static
