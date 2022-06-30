@@ -23,3 +23,7 @@
 * add unit tests
   * unit tests failing during build bc environment doesn't have python packages installed
 * upload docker containers to dockerhub
+
+
+
+docker-compose -f docker-compose-dev.yml up --build                                                     ─╯
