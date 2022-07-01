@@ -23,6 +23,6 @@
 
 ### File Index
 * docker-compose-dev.yml -> test production infrastructure with local docker builds
-* dev.sh -> runs docker-compose.yml and collecstatic
-* docker-compose.yml -> can run production infrastructure locally but pulls docker containers from dockerhub, is the the compose file used by AWS
+* dev.sh -> runs docker-compose.yml and collectstatic
+* docker-compose.yml -> can run production infrastructure locally but pulls docker containers from dockerhub, is the compose file used by AWS
 * Dockerfile.dev -> run Django app locally with Django development server
