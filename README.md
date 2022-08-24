@@ -9,21 +9,20 @@
 ❯ docker run -p 8001:8000 djangodev
 ```
 
-## Start up production server (uses gunicorn and nginx) locally
+## Start up production server (uses gunicorn and nginx) build and run docker containers locally
 * can add -D or --daemon command to the below to run in the background
 * accessed from localhost
+* use `dev.sh` so you don't have to run `python myproject/manage.py collecstatic` manually
+
 ```
 ❯ pwd
 ~/DjangoElasticBeanstalkTemplate
 
-❯ docker-compose up --build
+❯ docker-compose -f docker-compose-dev.yml up --build  
 ```
 
-## Todo
-* add unit tests
-  * unit tests failing during build bc environment doesn't have python packages installed
-* upload docker containers to dockerhub
-
-
-
-docker-compose -f docker-compose-dev.yml up --build                                                     ─╯
+### File Index
+* docker-compose-dev.yml -> test production infrastructure with local docker builds
+* dev.sh -> runs docker-compose.yml and collectstatic
+* docker-compose.yml -> can run production infrastructure locally but pulls docker containers from dockerhub, is the compose file used by AWS
+* Dockerfile.dev -> run Django app locally with Django development server
